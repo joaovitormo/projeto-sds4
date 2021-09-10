@@ -25,9 +25,9 @@ public class SaleService {
 	private SellerRepository sellerRepository;
 	
 	
-	
+	/*Serve para toda a operação ser na service*/
 	/*Busca paginada com atributo pageable*/
-	@Transactional(readOnly = true) /*Serve para toda a operação ser na service*/
+	@Transactional(readOnly = true)
 	public Page<SaleDTO> findAll(Pageable pageable) {
 		sellerRepository.findAll();
 		Page<Sale> result = repository.findAll(pageable);
@@ -43,5 +43,4 @@ public class SaleService {
 	public List<SaleSuccessDTO> successGroupedBySeller() {
 		return repository.successGroupedBySeller();
 	}
-
 }

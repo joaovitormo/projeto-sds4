@@ -26,10 +26,9 @@ public class SaleController {
 	
 	@GetMapping
 	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {
-		Page<SaleDTO> list = service.findAll(pageable);
+		Page<SaleDTO> list = service.findAll((org.springframework.data.domain.Pageable) pageable);
 		return ResponseEntity.ok(list);
 	}	
-	
 	
 	@GetMapping(value = "/amount-by-seller")
 	public ResponseEntity<List<SaleSumDTO>> amountGroupedBySeller() {
