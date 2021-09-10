@@ -25,6 +25,7 @@ public class SaleService {
 	private SellerRepository sellerRepository;
 	
 	
+	
 	/*Busca paginada com atributo pageable*/
 	@Transactional(readOnly = true) /*Serve para toda a operação ser na service*/
 	public Page<SaleDTO> findAll(Pageable pageable) {
