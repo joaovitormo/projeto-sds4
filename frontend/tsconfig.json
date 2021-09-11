@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./src", //config para facilitar as urls de import
     "target": "es5",
     "lib": [
       "dom",
